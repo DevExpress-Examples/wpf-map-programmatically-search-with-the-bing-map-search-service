@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/DXMapExample/MainWindow.xaml) (VB: [MainWindow.xaml.vb](./VB/DXMapExample/MainWindow.xaml.vb))
+* [MainWindow.xaml.cs](./CS/DXMapExample/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/DXMapExample/MainWindow.xaml.vb))
+<!-- default file list end -->
 # How to  programmatically search using the Bing Map Search service
 
 

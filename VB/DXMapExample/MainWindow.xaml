@@ -5,7 +5,7 @@
         xmlns:dxm="http://schemas.devexpress.com/winfx/2008/xaml/map" 
         xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" 
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
-        xmlns:Serialization="clr-namespace:DevExpress.Xpf.LayoutControl.Serialization;assembly=DevExpress.Xpf.LayoutControl.v16.1" 
+        xmlns:Serialization="clr-namespace:DevExpress.Xpf.LayoutControl.Serialization;assembly=DevExpress.Xpf.LayoutControl.v21.1" 
         x:Class="DXMapExample.MainWindow"
         Title="MainWindow" Width="654" Height="367" 
         dx:ThemeManager.ThemeName="Office2016White">
@@ -14,13 +14,13 @@
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <dxm:MapControl x:Name="mapControl" 
                         ShowSearchPanel="False">
             <dxm:MapControl.CoordinatesPanelOptions>
-                <dxm:CoordinatesPanelOptions Visible="False"/>
+                <dxm:CoordinatesPanelOptions Visible="False" />
             </dxm:MapControl.CoordinatesPanelOptions>
             <dxm:ImageTilesLayer>
                 <dxm:BingMapDataProvider BingKey="{Binding Source={StaticResource bingMapsKey}}" />
@@ -30,7 +30,7 @@
                 <dxm:BingSearchDataProvider x:Name="searchDataProvider"
                                             BingKey="{Binding Source={StaticResource bingMapsKey}}"
                                             SearchCompleted="OnSearchCompleted"
-                                            LayerItemsGenerating="OnLayerItemsGenerating"/>
+                                            LayerItemsGenerating="OnLayerItemsGenerating" />
                 <!--endregion #SearchCompleted-->
             </dxm:InformationLayer>
         </dxm:MapControl>
@@ -39,16 +39,16 @@
                             Padding="4">
             <dxlc:LayoutItem Label="Keyword:">
                 <dxe:TextEdit x:Name="teKeywords"
-                              TabIndex="0"/>
+                              TabIndex="0" />
             </dxlc:LayoutItem>
             <dx:SimpleButton Content="Search" 
                              HorizontalAlignment="Right" 
                              VerticalAlignment="Top" 
                              TabIndex="1" 
-                             Click="Search_Click"/>
+                             Click="Search_Click" />
             <dxe:TextEdit x:Name="teResult" 
                           VerticalScrollBarVisibility="Auto"
-                          HorizontalScrollBarVisibility="Auto"/>
+                          HorizontalScrollBarVisibility="Auto" />
         </dxlc:LayoutControl>
     </Grid>
 </Window>

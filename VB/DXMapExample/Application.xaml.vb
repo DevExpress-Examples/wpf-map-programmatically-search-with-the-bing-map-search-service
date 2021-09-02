@@ -6,15 +6,15 @@ Imports System.Linq
 Imports System.Windows
 
 Namespace DXMapExample
-    ''' <summary>
-    ''' Interaction logic for App.xaml
-    ''' </summary>
-    Partial Public Class App
-        Inherits Application
+	''' <summary>
+	''' Interaction logic for App.xaml
+	''' </summary>
+	Partial Public Class App
+		Inherits Application
 
-        Private Sub OnAppStartup_UpdateThemeName(ByVal sender As Object, ByVal e As StartupEventArgs)
+		Private Sub OnAppStartup_UpdateThemeName(ByVal sender As Object, ByVal e As StartupEventArgs)
 
-            DevExpress.Xpf.Core.ApplicationThemeHelper.UpdateApplicationThemeName()
-        End Sub
-    End Class
+			DevExpress.Xpf.Core.ApplicationThemeHelper.UpdateApplicationThemeName()
+		End Sub
+	End Class
 End Namespace

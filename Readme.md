@@ -5,9 +5,20 @@
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
 
-# Map for WPF - How to Programmatically Search with the Bing Map Search Service
+# Map for WPF - How to Search in Code with the Azure Map Search Service
 
-<p>This example demonstrates how to create a custom search panel that searches for location, keywords, and other parameters with the  <a href="http://documentation.devexpress.com/#WPF/DevExpressXpfMapBingSearchDataProvider_Searchtopic"><u>BingSearchDataProvider.Search</u></a> method.</p><p>To use the Search panel, specify search parameters (location, keyword, start search index, geographical point coordinates) in the textbox elements. </p><p>When you handle the <strong>sear</strong><strong>ch</strong><strong>_Click </strong>event, all parameters are passed to the<strong> Search</strong><strong> </strong><strong> </strong>method, and you can see the result in the textblock element below. </p><p>The  results contain a  <a href="http://documentation.devexpress.com/#WPF/DevExpressXpfMapLocationInformation_DisplayNametopic"><u>display name</u></a> , <a href="http://documentation.devexpress.com/#WPF/DevExpressXpfMapLocationInformation_EntityTypetopic"><u>entity type</u></a>, and   <a href="http://documentation.devexpress.com/#WPF/DevExpressXpfMapLocationInformation_Addresstopic"><u>address</u></a> associated with the search  <a href="http://documentation.devexpress.com/#WPF/DevExpressXpfMapSearchRequestResult_Locationtopic"><u>location</u></a>.  In addition,  the <a href="http://documentation.devexpress.com/#WPF/DevExpressXpfMapSearchRequestResult_AlternateSearchRegionstopic"><u>SearchRequestResult.AlternateSearchRegions</u></a>  property returns results of searching alternate regions. </p><p> You can also see search request information returned by the <a href="http://documentation.devexpress.com/#WPF/DevExpressXpfMapRequestResultBase_ResultCodetopic"><u>RequestResultBase.ResultCode</u></a>, <a href="http://documentation.devexpress.com/#WPF/DevExpressXpfMapRequestResultBase_FaultReasontopic"><u>RequestResultBase.FaultReason</u></a> and  <a href="http://documentation.devexpress.com/#WPF/DevExpressXpfMapSearchRequestResult_EstimatedMatchestopic"><u>SearchRequestResult.EstimatedMatches</u></a> properties. </p><p>Note that if you run this sample as is, you will get a warning message saying that the specified Bing Maps key is invalid. To learn more about Bing Map keys, please refer to the <a href="http://documentation.devexpress.com/#WPF/CustomDocument10974"><u>How to: Get a Bing Maps Key</u></a>  tutorial.</p>
+This example demonstrates how to create a custom search panel that searches for location, keywords, and other parameters with the [AzureSearchDataProvider.Search](https://docs.devexpress.com/WPF/DevExpress.Xpf.Map.AzureSearchDataProvider.Search.overloads) method.
+
+> **Note:**
+> If you run this sample as is, you get a warning message saying that the specified Azure Maps key is invalid. To learn more about Azure Map keys, please refer following tutorial: [Migrate from Bing Maps to Azure Maps](https://docs.devexpress.com/WPF/405436/controls-and-libraries/map-control/migrate-from-bing-to-azure)
+
+## Implementation Details
+
+To use the Search panel, specify search parameters (location, keyword, start search index, geographical point coordinates) in the textbox elements.
+
+When you handle the `search_Click` event, all parameters are passed to the `Search` method, and you can see the result in the text block element below.
+
+The results contain a **display name**, **entity type**, and **address** associated with the search **location**. You can also see search request information returned by the [RequestResultBase.ResultCode](https://docs.devexpress.com/WPF/DevExpress.Xpf.Map.RequestResultBase.ResultCode), [RequestResultBase.FaultReason](https://docs.devexpress.com/WPF/DevExpress.Xpf.Map.RequestResultBase.FaultReason), and [SearchRequestResult.EstimatedMatches](https://docs.devexpress.com/WPF/DevExpress.Xpf.Map.SearchRequestResult.EstimatedMatches) properties.
 
 ## Files to Review
 
@@ -17,7 +28,6 @@
 ## Documentation
 
 * [Search](https://docs.devexpress.com/WPF/17463/controls-and-libraries/map-control/gis-data/search)
-
 
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?

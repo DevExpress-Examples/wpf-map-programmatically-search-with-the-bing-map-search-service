@@ -16,7 +16,7 @@ namespace DXMapExample {
         #endregion #Search_Click
 
         #region #SearchCompleted_Implementation
-        private void OnSearchCompleted(object sender, BingSearchCompletedEventArgs e) {
+        private void OnSearchCompleted(object sender, AzureSearchCompletedEventArgs e) {
             if(e.Cancelled) return;
             if(e.RequestResult.ResultCode != RequestResultCode.Success) {
                 teResult.Text = "The Bing Search service does not work for this location.";

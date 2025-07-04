@@ -16,9 +16,9 @@ Namespace DXMapExample
             Me.searchDataProvider.Search(Me.teKeywords.Text)
         End Sub
 
-'#End Region  ' #Search_Click
-'#Region "#SearchCompleted_Implementation"
-        Private Sub OnSearchCompleted(ByVal sender As Object, ByVal e As BingSearchCompletedEventArgs)
+        '#End Region  ' #Search_Click
+        '#Region "#SearchCompleted_Implementation"
+        Private Sub OnSearchCompleted(ByVal sender As Object, ByVal e As AzureSearchCompletedEventArgs)
             If e.Cancelled Then Return
             If e.RequestResult.ResultCode <> RequestResultCode.Success Then
                 Me.teResult.Text = "The Bing Search service does not work for this location."
@@ -39,7 +39,7 @@ Namespace DXMapExample
             Me.teResult.Text = resultList.ToString()
         End Sub
 
-'#End Region  ' #SearchCompleted_Implementation
+        '#End Region  ' #SearchCompleted_Implementation
         Private Sub OnLayerItemsGenerating(ByVal sender As Object, ByVal args As LayerItemsGeneratingEventArgs)
             Me.mapControl.ZoomToFit(args.Items, 0.4)
         End Sub

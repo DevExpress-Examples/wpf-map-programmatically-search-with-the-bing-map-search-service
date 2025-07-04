@@ -5,12 +5,12 @@
         xmlns:dxm="http://schemas.devexpress.com/winfx/2008/xaml/map" 
         xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" 
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
-        xmlns:Serialization="clr-namespace:DevExpress.Xpf.LayoutControl.Serialization;assembly=DevExpress.Xpf.LayoutControl.v24.2" 
+        xmlns:Serialization="clr-namespace:DevExpress.Xpf.LayoutControl.Serialization;assembly=DevExpress.Xpf.LayoutControl.v25.1" 
         x:Class="DXMapExample.MainWindow"
         Title="MainWindow" Width="654" Height="367" 
         dx:ThemeManager.ThemeName="Office2016White">
     <Window.Resources>
-        <sys:String x:Key="bingMapsKey">Your Bing Key Here</sys:String>
+        <sys:String x:Key="azureMapsKey">Your Azure Key Here</sys:String>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -22,13 +22,13 @@
             <dxm:MapControl.CoordinatesPanelOptions>
                 <dxm:CoordinatesPanelOptions Visible="False" />
             </dxm:MapControl.CoordinatesPanelOptions>
-            <dxm:ImageTilesLayer>
-                <dxm:BingMapDataProvider BingKey="{Binding Source={StaticResource bingMapsKey}}" />
-            </dxm:ImageTilesLayer>
+            <dxm:ImageLayer>
+                <dxm:AzureMapDataProvider AzureKey="{Binding Source={StaticResource azureMapsKey}}" />
+            </dxm:ImageLayer>
             <dxm:InformationLayer>
                 <!--region #SearchCompleted-->
-                <dxm:BingSearchDataProvider x:Name="searchDataProvider"
-                                            BingKey="{Binding Source={StaticResource bingMapsKey}}"
+                <dxm:AzureSearchDataProvider x:Name="searchDataProvider"
+                                            AzureKey="{Binding Source={StaticResource azureMapsKey}}"
                                             SearchCompleted="OnSearchCompleted"
                                             LayerItemsGenerating="OnLayerItemsGenerating" />
                 <!--endregion #SearchCompleted-->
